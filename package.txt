@@ -1,0 +1,53 @@
+
+SETTINGS FOR PLUGINS
+--------------------
+
+"posthtml": {
+	"plugins": {
+		"posthtml-include": {},
+		"posthtml-beautify": {
+			"rules": {
+				"indent": 4,
+				"blankLines": false
+			}
+		}
+	}
+},
+"postcss": {
+	"plugins": {
+		"cssnano": {},
+		"autoprefixer": {}
+	}
+},
+"babel": {
+	"presets": [
+		"@babel/preset-env"
+	]
+},
+"browserslist": [
+	"defaults"
+],
+"imagemin": {},
+"scripts": {
+	"clean": "rimraf ./dist/*",
+	"package": "parcel ./app/index.html --open --no-source-maps --out-dir ./docs --public-url /the-big-brown-frontend/",
+	"post": "npm-run-all clean package"
+}
+
+DEV DEPENDENCIES
+----------------
+
+"devDependencies": {
+	"@babel/core": "^7.5.4",
+	"@babel/preset-env": "^7.5.4",
+	"autoprefixer": "^9.6.1",
+	"copyfiles": "^2.1.1",
+	"imagemin": "^7.0.0",
+	"imagemin-cli": "^5.0.0",
+	"npm-run-all": "^4.1.5",
+	"parcel-bundler": "^1.12.3",
+	"parcel-plugin-imagemin": "^3.0.0",
+	"posthtml-beautify": "^0.2.6",
+	"posthtml-include": "^1.2.0",
+	"sass": "^1.22.3"
+}

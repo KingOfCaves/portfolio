@@ -1,0 +1,26 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+*:link, *:visited{
+	color: currentColor;
+	text-decoration: none;
+}
+
+body {
+	background: #131313;
+	color: #fefefe;
+	user-select: none;
+}
+
+.wrapper {
+	position: relative;
+	height: auto;
+	max-width: 128rem;
+	margin: 0 auto;
+}
