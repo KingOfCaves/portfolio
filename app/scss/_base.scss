@@ -13,9 +13,14 @@ html {
 }
 
 body {
-	background: #131313;
+	overflow-x: hidden;
 	color: #fefefe;
+	background: #131313;
 	user-select: none;
+	font-family: 'Alegreya Sans';
+	font-size: 3rem;
+	
+	height: 200rem;
 }
 
 .wrapper {
