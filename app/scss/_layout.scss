@@ -1,8 +1,5 @@
 .heading-primary {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: absolute;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -12,13 +9,14 @@
 	flex-direction: column;
 	font-size: 16rem;
 	font-weight: 400;
-	text-transform: lowercase;
 	text-align: center;
 	text-shadow:
 		0 0 6px black,
 		0 0 6px black,
 		0 0 6px black,
-		0 0 6px black;
+		0 0 18px black,
+		0 0 18px black,
+		0 0 18px black;
 }
 
 .heading-secondary {
@@ -27,24 +25,27 @@
 .heading-sub {
 	font-size: .25em;
 	letter-spacing: 4px;
+	text-transform: lowercase;
 }
 
 .header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: relative;
 	height: 100vh;
-	width: 100vw;
-	// left: 50%;
-	// transform: translate(-50%, 0);
+	width: 100%;
 	top: 0;
 	left: 0;
 	font-family: 'Alegreya Sans SC';
-	overflow: hidden;
 	
 	&::after {
 		content: '';
 		position: absolute;
 		top: 0;
-		width: 100%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: 100vw;
 		height: 100%;
 		background: url(../images/header-bg.jpg);
 		background-position: center;
@@ -62,13 +63,33 @@
 	justify-content: center;
 	align-items: center;
 	height: auto;
-	width: 100vw;
-	padding: 1rem 0;
+	width: 100%;
+	padding: 1rem 2rem;
 	z-index: 100;
 	background: #131313;
 
+	&__brand {
+		margin-right: auto;
+	}
+	
 	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		height: 100%;
+		font-size: 2rem;
+
+		& > :first-child {
+			margin-right: .5em;
+		}
+	}
+
+	&__link:not(:last-child) {
+		margin-right: 1em;
+	}
+
+	&__link:link, &__link:visited {
+		color: currentColor;
 	}
 }
 
