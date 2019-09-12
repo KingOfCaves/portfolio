@@ -25,5 +25,10 @@ body {
 	position: relative;
 	height: auto;
 	max-width: 128rem;
+	padding: 0 1em;
 	margin: 0 auto;
+
+	& > :not(:last-child) {
+		margin-bottom: 1em;
+	}
 }

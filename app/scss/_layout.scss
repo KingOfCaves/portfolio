@@ -13,6 +13,11 @@
 }
 
 .heading-secondary {
+	width: auto;
+	padding: 4px 0;
+	border-bottom: currentColor solid 1px;
+	font-family: 'Alegreya Sans SC';
+	font-size: 1.5em;
 }
 
 .heading-sub {
@@ -102,6 +107,13 @@
 		background: #131313;
 		z-index: -1;
 	}
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
 }
 
 .footer {
