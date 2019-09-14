@@ -117,8 +117,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"images/header-bg.jpg":[function(require,module,exports) {
-module.exports = "/kingofcaves-portfolio/header-bg.22fb121c.jpg";
+})({"images/restaurant-review.jpg":[function(require,module,exports) {
+module.exports = "/kingofcaves-portfolio/restaurant-review.d00c6f9b.jpg";
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
