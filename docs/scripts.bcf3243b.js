@@ -133,7 +133,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         href: "https://github.com/KingOfCaves/wills-memory-game",
         link: "http://github//memory-game",
         title: "Memory Game",
-        desc: 'A simple memory game that uses nothing but vanilla javascript, html and css.'
+        desc: 'A simple memory game that uses nothing but vanilla JavaScript, HTML and CSS.'
       }, {
         id: "arcade-classic",
         href: "https://github.com/KingOfCaves/wills-arcade-classic",
@@ -153,17 +153,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         title: "Restaurant Review App",
         desc: 'Troubleshooting a restaurant review app by adding aria labeling for accessibility, adding necessary headers to the mapbox api and making the app compatible with all devices.'
       }, {
-        id: "jamila-wallace-portfolio",
-        href: "https://github.com/KingOfCaves/jamila-wallace-portfolio",
-        link: "http://github//j.-wallace-portfolio",
-        title: "J. Wallace's Portfolio",
-        desc: 'A recreation of my client\'s design. By using my client\'s Adobe XD design as a base, a near 1:1 responsive reconstruction was made in HTML and CSS.'
-      }, {
         id: "the-big-brown",
         href: "https://github.com/KingOfCaves/the-big-brown-frontend",
         link: "http://github//the-big-brown",
         title: "The Big Brown",
         desc: 'Frontend for a fake restaurant website. Uses Parcel for compiling all of the scripts, scss files and html templates. Also uses PostCSS and PostHTML for utilizing autoprefixer and other related plugins.'
+      }, {
+        id: "jamila-wallace-portfolio",
+        href: "https://github.com/KingOfCaves/jamila-wallace-portfolio",
+        link: "http://github//j.-wallace-portfolio",
+        title: "J. Wallace's Portfolio",
+        desc: 'A recreation of my client\'s design. By using my client\'s Adobe XD design as a base, a near 1:1 responsive reconstruction was made in HTML, CSS and JavaScript.'
       }]
     },
     backend: {
@@ -250,7 +250,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60806" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62256" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
