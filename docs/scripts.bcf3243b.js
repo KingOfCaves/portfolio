@@ -133,7 +133,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         href: "https://github.com/KingOfCaves/wills-memory-game",
         link: "http://github//memory-game",
         title: "Memory Game",
-        desc: 'A simple memory game to help solidify knowledge on how to manipulate the DOM and other javascript oriented techniques.'
+        desc: 'A simple memory game that uses nothing but vanilla javascript, html and css.'
       }, {
         id: "arcade-classic",
         href: "https://github.com/KingOfCaves/wills-arcade-classic",
@@ -145,13 +145,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         href: "https://github.com/KingOfCaves/wills-feedreader-testing",
         link: "http://github//feedreader-testing",
         title: "Feedreader Testing",
-        desc: 'A test suite built for testing the functionality of another person\'s feedreader application. Built using Jasmine.js.'
+        desc: 'A suite built for testing the functionality of another person\'s feedreader application. Built using Jasmine.js.'
       }, {
         id: "restaurant-review",
         href: "https://github.com/KingOfCaves/wills-restaurant-review",
         link: "http://github//restaurant-review",
         title: "Restaurant Review App",
         desc: 'Troubleshooting a restaurant review app by adding aria labeling for accessibility, adding necessary headers to the mapbox api and making the app compatible with all devices.'
+      }, {
+        id: "jamila-wallace-portfolio",
+        href: "https://github.com/KingOfCaves/jamila-wallace-portfolio",
+        link: "http://github//j.-wallace-portfolio",
+        title: "J. Wallace's Portfolio",
+        desc: 'A recreation of my client\'s design. By using my client\'s Adobe XD design as a base, a near 1:1 responsive reconstruction was made in HTML and CSS.'
       }, {
         id: "the-big-brown",
         href: "https://github.com/KingOfCaves/the-big-brown-frontend",
@@ -167,7 +173,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         href: "https://github.com/KingOfCaves/wills-task-manager-api",
         link: "http://github//task-manager-api",
         title: "Task Manager API",
-        desc: 'An API developed using Node.js.'
+        desc: 'An API developed using Node.js. The API comes with several sophisticated features such as an authentication middleware, CRUD endpoints and image manipulation.'
       }]
     },
     fullstack: {
@@ -183,7 +189,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         href: "https://github.com/KingOfCaves/wills-weather-app",
         link: "http://github//weather-app",
         title: "Weather App",
-        desc: 'A fullstack chat application with a Node.js backend. Uses socket.io to emit and detect events in real time.'
+        desc: 'A simple weather fetching web application. Uses Node.js to access the DarkSky API and Mapbox API in the background.'
+      }, {
+        id: "fountain-of-dreams",
+        href: "https://github.com/KingOfCaves/fountain-of-dreams",
+        link: "http://github//fountain-of-dreams",
+        title: "Fountain of Dreams",
+        desc: 'A mallsoft/vaporwave oriented live radio thats currently a work in progress. The basic functionality of completed, but theres definitely still more to be done!'
       }]
     }
   };
@@ -238,7 +250,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55282" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60648" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
