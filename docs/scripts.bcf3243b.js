@@ -167,7 +167,23 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         href: "https://github.com/KingOfCaves/wills-task-manager-api",
         link: "http://github//task-manager-api",
         title: "Task Manager API",
-        desc: ''
+        desc: 'An API developed using Node.js.'
+      }]
+    },
+    fullstack: {
+      heading: "Fullstack Development",
+      projects: [{
+        id: "chat-app",
+        href: "https://github.com/KingOfCaves/wills-chat-app",
+        link: "http://github//chat-app",
+        title: "Chat App",
+        desc: 'A fullstack chat application with a Node.js backend. Uses socket.io to emit and detect events in real time.'
+      }, {
+        id: "weather-app",
+        href: "https://github.com/KingOfCaves/wills-weather-app",
+        link: "http://github//weather-app",
+        title: "Weather App",
+        desc: 'A fullstack chat application with a Node.js backend. Uses socket.io to emit and detect events in real time.'
       }]
     }
   };
@@ -179,9 +195,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         heading = _data$x.heading,
         projects = _data$x.projects;
     var projectHTML = "".trim();
-    projects.forEach(function (project) {
-      projectHTML += "\n\t\t\t<div class=\"project\">\n\t\t\t\t<a class=\"project__graphic\" href=\"".concat(project.href, "\" target=\"_blank\" id=\"").concat(project.id, "\">\n\t\t\t\t\t<p class=\"project__link\">").concat(project.link, "</p>\n\t\t\t\t</a>\n\t\t\t\t<p class=\"project__title\">").concat(project.title, "</p>\n\t\t\t\t<p class=\"project__desc\">").concat(project.desc, "</p>\n\t\t\t</div>\n\t\t\t").trim();
-    });
+
+    try {
+      projects.forEach(function (project) {
+        projectHTML += "\n\t\t\t\t<div class=\"project\">\n\t\t\t\t\t<a class=\"project__graphic\" href=\"".concat(project.href, "\" target=\"_blank\" id=\"").concat(project.id, "\">\n\t\t\t\t\t\t<p class=\"project__link\">").concat(project.link, "</p>\n\t\t\t\t\t</a>\n\t\t\t\t\t<p class=\"project__title\">").concat(project.title, "</p>\n\t\t\t\t\t<p class=\"project__desc\">").concat(project.desc, "</p>\n\t\t\t\t</div>\n\t\t\t\t").trim();
+      });
+    } catch (error) {
+      console.log('Something wen\'t wrong.', error);
+    }
+
     var typeHTML = "\n\t\t<div class=\"projects\">\n\t\t\t<h2 class=\"heading-secondary\">".concat(heading, "</h2>\n\t\t\t").concat(projectHTML, "\n\t\t</div>").trim();
     compiledHTML += typeHTML;
   }
@@ -216,7 +238,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50603" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55282" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

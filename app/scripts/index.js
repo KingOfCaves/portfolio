@@ -55,7 +55,26 @@
 					href: "https://github.com/KingOfCaves/wills-task-manager-api",
 					link: "http://github//task-manager-api",
 					title: "Task Manager API",
-					desc: ''
+					desc: 'An API developed using Node.js.'
+				}
+			]
+		},
+		fullstack: {
+			heading: "Fullstack Development",
+			projects: [
+				{
+					id: "chat-app",
+					href: "https://github.com/KingOfCaves/wills-chat-app",
+					link: "http://github//chat-app",
+					title: "Chat App",
+					desc: 'A fullstack chat application with a Node.js backend. Uses socket.io to emit and detect events in real time.'
+				},
+				{
+					id: "weather-app",
+					href: "https://github.com/KingOfCaves/wills-weather-app",
+					link: "http://github//weather-app",
+					title: "Weather App",
+					desc: 'A fullstack chat application with a Node.js backend. Uses socket.io to emit and detect events in real time.'
 				}
 			]
 		}
@@ -68,17 +87,21 @@
 		const { heading, projects } = data[x];
 		let projectHTML = "".trim();
 
-		projects.forEach(project => {
-			projectHTML += `
-			<div class="project">
-				<a class="project__graphic" href="${project.href}" target="_blank" id="${project.id}">
-					<p class="project__link">${project.link}</p>
-				</a>
-				<p class="project__title">${project.title}</p>
-				<p class="project__desc">${project.desc}</p>
-			</div>
-			`.trim()
-		});
+		try {
+			projects.forEach(project => {
+				projectHTML += `
+				<div class="project">
+					<a class="project__graphic" href="${project.href}" target="_blank" id="${project.id}">
+						<p class="project__link">${project.link}</p>
+					</a>
+					<p class="project__title">${project.title}</p>
+					<p class="project__desc">${project.desc}</p>
+				</div>
+				`.trim()
+			});
+		} catch (error) {
+			console.log('Something wen\'t wrong.', error)
+		}
 		
 		let typeHTML = `
 		<div class="projects">

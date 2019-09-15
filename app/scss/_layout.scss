@@ -135,8 +135,8 @@
 	height: auto;
 	width: 100%;
 
-	& > :not(:last-child) {
-		margin-right: 2%;
+	& > * {
+		margin: 0 1rem 3rem;
 	}
 }
 
@@ -152,10 +152,9 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	transition: .3s all;
-	margin-bottom: 2em;
 	text-align: center;
 
-	& > * {
+	& > :not(:last-child) {
 		margin-bottom: .75em;
 	}
 
@@ -169,6 +168,7 @@
 		align-items: center;
 		height: 24rem;
 		width: 100%;
+		background-image: url(../images/temp.jpg);
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -213,3 +213,8 @@
 #feedreader-testing { background-image: url('../images/feedreader-testing.jpg')}
 #restaurant-review { background-image: url('../images/restaurant-review.jpg')}
 #the-big-brown { background-image: url('../images/the-big-brown.jpg')}
+
+#task-manager-api { background-image: url('../images/task-manager-api.jpg') }
+
+#chat-app { background-image: url(../images/chat-app.jpg) }
+#weather-app { background-image: url(../images/weather-app.jpg) }
