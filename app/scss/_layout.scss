@@ -49,6 +49,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		z-index: -1;
+		filter: hue-rotate(80deg);
 	}
 }
 
@@ -68,17 +69,16 @@
 
 	& a {
 		transition: .3s all;
-		
+
 		&:hover {
 			text-shadow: 0 0 .5em currentColor;
-			transform: translate(0, -10%);
 		}
 	}
 
 	&__label {
 		margin-right: .5em;
 	}
-	
+
 	&__brand {
 		display: flex;
 		justify-content: center;
@@ -158,10 +158,6 @@
 		margin-bottom: .75em;
 	}
 
-	&:hover {
-		transform: translate(0, -8px);
-	}
-
 	&__graphic {
 		display: flex;
 		justify-content: center;
@@ -174,17 +170,13 @@
 		background-repeat: no-repeat;
 	}
 
-	&:hover &__link {
-		transform: translate(0, 0);
-		opacity: 1;
-	}
-	
 	&__link {
 		width: 100%;
 		height: auto;
 		padding: .75em;
 		font-size: .75em;
 		background: #131313;
+		color: #00fff7;
 		transform: translate(0, 25%);
 		opacity: 0;
 		transition: .3s all;

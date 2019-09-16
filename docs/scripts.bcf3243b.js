@@ -133,7 +133,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         href: "https://github.com/KingOfCaves/wills-memory-game",
         link: "http://github//memory-game",
         title: "Memory Game",
-        desc: 'A simple memory game that uses nothing but vanilla JavaScript, HTML and CSS.'
+        desc: 'A simple memory game that uses nothing but vanilla JavaScript, HTML and CSS. Made to look good on every device!'
       }, {
         id: "arcade-classic",
         href: "https://github.com/KingOfCaves/wills-arcade-classic",
@@ -250,7 +250,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65173" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51784" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

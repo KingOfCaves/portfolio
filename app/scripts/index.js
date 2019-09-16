@@ -15,7 +15,7 @@
 					href: "https://github.com/KingOfCaves/wills-memory-game",
 					link: "http://github//memory-game",
 					title: "Memory Game",
-					desc: 'A simple memory game that uses nothing but vanilla JavaScript, HTML and CSS.'
+					desc: 'A simple memory game that uses nothing but vanilla JavaScript, HTML and CSS. Made to look good on every device!'
 				},
 				{
 					id: "arcade-classic",
