@@ -33,7 +33,7 @@
   ],
   "scripts": {
     "clean": "rimraf ./docs/*",
-    "package": "parcel ./app/index.html --open --no-source-maps --out-dir ./docs --public-url /kingofcaves-portfolio/",
+    "package": "parcel ./app/index.html --open --no-source-maps --out-dir ./docs --public-url /portfolio/",
     "post": "npm-run-all clean package"
   },
   "repository": {
