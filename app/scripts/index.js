@@ -111,8 +111,7 @@
 					</a>
 					<p class="project__title">${project.title}</p>
 					<p class="project__desc">${project.desc}</p>
-				</div>
-				`.trim()
+				</div>`.trim()
 			});
 		} catch (error) {
 			console.log('Something wen\'t wrong.', error)
