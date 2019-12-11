@@ -55,41 +55,41 @@
 				
 			]
 		},
-		backend: {
-			heading: "Backend Development",
-			projects: [
-				{
-					id: "task-manager-api",
-					href: "https://github.com/KingOfCaves/wills-task-manager-api",
-					link: "http://github//task-manager-api",
-					title: "Task Manager API",
-					desc: 'An API developed using Node.js. The API comes with several sophisticated features such as an authentication middleware, CRUD endpoints and image manipulation.'
-				}
-			]
-		},
+		// backend: {
+		// 	heading: "Backend Development",
+		// 	projects: [
+		// 		{
+		// 			id: "task-manager-api",
+		// 			href: "https://github.com/KingOfCaves/wills-task-manager-api",
+		// 			link: "http://github//task-manager-api",
+		// 			title: "Task Manager API",
+		// 			desc: 'An API developed using Node.js. The API comes with several sophisticated features such as an authentication middleware, CRUD endpoints and image manipulation.'
+		// 		}
+		// 	]
+		// },
 		fullstack: {
 			heading: "Fullstack Development",
 			projects: [
-				{
-					id: "chat-app",
-					href: "https://github.com/KingOfCaves/wills-chat-app",
-					link: "http://github//chat-app",
-					title: "Chat App",
-					desc: 'A fullstack chat application with a Node.js backend. Uses socket.io to emit and detect events in real time.'
-				},
-				{
-					id: "weather-app",
-					href: "https://github.com/KingOfCaves/wills-weather-app",
-					link: "http://github//weather-app",
-					title: "Weather App",
-					desc: 'A simple weather fetching web application. Uses Node.js to access the DarkSky API and Mapbox API in the background.'
-				},
+				// {
+				// 	id: "chat-app",
+				// 	href: "https://github.com/KingOfCaves/wills-chat-app",
+				// 	link: "http://github//chat-app",
+				// 	title: "Chat App",
+				// 	desc: 'A fullstack chat application with a Node.js backend. Uses socket.io to emit and detect events in real time.'
+				// },
+				// {
+				// 	id: "weather-app",
+				// 	href: "https://github.com/KingOfCaves/wills-weather-app",
+				// 	link: "http://github//weather-app",
+				// 	title: "Weather App",
+				// 	desc: 'A simple weather fetching web application. Uses Node.js to access the DarkSky API and Mapbox API in the background.'
+				// },
 				{
 					id: "fountain-of-dreams",
 					href: "https://github.com/KingOfCaves/fountain-of-dreams",
 					link: "http://github//fountain-of-dreams",
 					title: "Fountain of Dreams",
-					desc: 'A mallsoft/vaporwave oriented live radio thats currently a work in progress. The basic functionality of completed, but theres definitely still more to be done!'
+					desc: 'A mallsoft/vaporwave oriented live radio that\'s currently live now! An ongoing project that will continue to be added to and perfected.'
 				}
 			]
 		}

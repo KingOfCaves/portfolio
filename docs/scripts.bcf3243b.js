@@ -166,36 +166,40 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         desc: 'A recreation of my client\'s design. By using my client\'s Adobe XD design as a base, a near 1:1 responsive reconstruction was made in HTML, CSS and JavaScript.'
       }]
     },
-    backend: {
-      heading: "Backend Development",
-      projects: [{
-        id: "task-manager-api",
-        href: "https://github.com/KingOfCaves/wills-task-manager-api",
-        link: "http://github//task-manager-api",
-        title: "Task Manager API",
-        desc: 'An API developed using Node.js. The API comes with several sophisticated features such as an authentication middleware, CRUD endpoints and image manipulation.'
-      }]
-    },
+    // backend: {
+    // 	heading: "Backend Development",
+    // 	projects: [
+    // 		{
+    // 			id: "task-manager-api",
+    // 			href: "https://github.com/KingOfCaves/wills-task-manager-api",
+    // 			link: "http://github//task-manager-api",
+    // 			title: "Task Manager API",
+    // 			desc: 'An API developed using Node.js. The API comes with several sophisticated features such as an authentication middleware, CRUD endpoints and image manipulation.'
+    // 		}
+    // 	]
+    // },
     fullstack: {
       heading: "Fullstack Development",
-      projects: [{
-        id: "chat-app",
-        href: "https://github.com/KingOfCaves/wills-chat-app",
-        link: "http://github//chat-app",
-        title: "Chat App",
-        desc: 'A fullstack chat application with a Node.js backend. Uses socket.io to emit and detect events in real time.'
-      }, {
-        id: "weather-app",
-        href: "https://github.com/KingOfCaves/wills-weather-app",
-        link: "http://github//weather-app",
-        title: "Weather App",
-        desc: 'A simple weather fetching web application. Uses Node.js to access the DarkSky API and Mapbox API in the background.'
-      }, {
+      projects: [// {
+      // 	id: "chat-app",
+      // 	href: "https://github.com/KingOfCaves/wills-chat-app",
+      // 	link: "http://github//chat-app",
+      // 	title: "Chat App",
+      // 	desc: 'A fullstack chat application with a Node.js backend. Uses socket.io to emit and detect events in real time.'
+      // },
+      // {
+      // 	id: "weather-app",
+      // 	href: "https://github.com/KingOfCaves/wills-weather-app",
+      // 	link: "http://github//weather-app",
+      // 	title: "Weather App",
+      // 	desc: 'A simple weather fetching web application. Uses Node.js to access the DarkSky API and Mapbox API in the background.'
+      // },
+      {
         id: "fountain-of-dreams",
         href: "https://github.com/KingOfCaves/fountain-of-dreams",
         link: "http://github//fountain-of-dreams",
         title: "Fountain of Dreams",
-        desc: 'A mallsoft/vaporwave oriented live radio thats currently a work in progress. The basic functionality of completed, but theres definitely still more to be done!'
+        desc: 'A mallsoft/vaporwave oriented live radio that\'s currently live now! An ongoing project that will continue to be added to and perfected.'
       }]
     }
   };
@@ -210,7 +214,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
     try {
       projects.forEach(function (project) {
-        projectHTML += "\n\t\t\t\t<div class=\"project\">\n\t\t\t\t\t<a class=\"project__graphic\" href=\"".concat(project.href, "\" target=\"_blank\" id=\"").concat(project.id, "\">\n\t\t\t\t\t\t<p class=\"project__link\">").concat(project.link, "</p>\n\t\t\t\t\t</a>\n\t\t\t\t\t<p class=\"project__title\">").concat(project.title, "</p>\n\t\t\t\t\t<p class=\"project__desc\">").concat(project.desc, "</p>\n\t\t\t\t</div>\n\t\t\t\t").trim();
+        projectHTML += "\n\t\t\t\t<div class=\"project\">\n\t\t\t\t\t<a class=\"project__graphic\" href=\"".concat(project.href, "\" target=\"_blank\" id=\"").concat(project.id, "\">\n\t\t\t\t\t\t<p class=\"project__link\">").concat(project.link, "</p>\n\t\t\t\t\t</a>\n\t\t\t\t\t<p class=\"project__title\">").concat(project.title, "</p>\n\t\t\t\t\t<p class=\"project__desc\">").concat(project.desc, "</p>\n\t\t\t\t</div>").trim();
       });
     } catch (error) {
       console.log('Something wen\'t wrong.', error);
@@ -250,7 +254,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51120" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50989" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -281,8 +285,9 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
         assetsToAccept.forEach(function (v) {
           hmrAcceptRun(v[0], v[1]);
         });
-      } else {
-        window.location.reload();
+      } else if (location.reload) {
+        // `location` global exists in a web worker context but lacks `.reload()` function.
+        location.reload();
       }
     }
 
