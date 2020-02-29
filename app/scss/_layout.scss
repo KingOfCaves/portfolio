@@ -3,13 +3,9 @@
 	font-weight: 500;
 	text-align: center;
 	text-shadow:
-		// 0 0 6px currentColor,
-		0 0 6px black,
-		0 0 6px black,
-		0 0 6px black,
-		0 0 18px black,
-		0 0 18px black,
-		0 0 18px black;
+		// 0 0 6px currentColor, 0 0 6px black, 0 0 6px black, 0 0 6px black, 0
+			0 18px black,
+		0 0 18px black, 0 0 18px black;
 }
 
 .heading-secondary {
@@ -20,7 +16,7 @@
 }
 
 .heading-sub {
-	font-size: .25em;
+	font-size: 0.25em;
 	letter-spacing: 4px;
 	text-transform: lowercase;
 }
@@ -68,15 +64,15 @@
 	z-index: 100;
 
 	& a {
-		transition: .3s all;
+		transition: 0.3s all;
 
 		&:hover {
-			text-shadow: 0 0 .5em currentColor;
+			text-shadow: 0 0 0.5em currentColor;
 		}
 	}
 
 	&__label {
-		margin-right: .5em;
+		margin-right: 0.5em;
 	}
 
 	&__brand {
@@ -86,7 +82,7 @@
 		margin-right: auto;
 
 		&__icon {
-			font-size: .75em;
+			font-size: 0.75em;
 		}
 	}
 
@@ -102,13 +98,14 @@
 		margin-right: 1em;
 	}
 
-	&__link:link, &__link:visited {
+	&__link:link,
+	&__link:visited {
 		color: currentColor;
 	}
 
 	&::after {
 		position: absolute;
-		content: "";
+		content: '';
 		width: 100vw;
 		height: 100%;
 		background: #131313;
@@ -151,11 +148,11 @@
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	transition: .3s all;
+	transition: 0.3s all;
 	text-align: center;
 
 	& > :not(:last-child) {
-		margin-bottom: .75em;
+		margin-bottom: 0.75em;
 	}
 
 	&__graphic {
@@ -173,22 +170,22 @@
 	&__link {
 		width: 100%;
 		height: auto;
-		padding: .75em;
-		font-size: .75em;
+		padding: 0.75em;
+		font-size: 0.75em;
 		background: #131313;
 		color: #00fff7;
 		transform: translate(0, 25%);
 		opacity: 0;
-		transition: .3s all;
+		transition: 0.3s all;
 	}
 
 	&__title {
-		padding: 0 1em .25em;
+		padding: 0 1em 0.25em;
 		border-bottom: 3px solid currentColor;
 	}
 
 	&__desc {
-		font-family: 'Alegreya Sans'
+		font-family: 'Alegreya Sans';
 	}
 }
 
@@ -196,19 +193,44 @@
 	position: relative;
 	width: 100%;
 	height: auto;
-	padding: 0 .5em;
+	padding: 0 0.5em;
 }
 
-#portfolio-project { background-image: url(../images/portfolio-project.jpg) }
-#memory-game { background-image: url(../images/memory-game.jpg) }
-#arcade-classic { background-image: url(../images/arcade-classic.jpg) }
-#feedreader-testing { background-image: url(../images/feedreader-testing.jpg) }
-#restaurant-review { background-image: url(../images/restaurant-review.jpg) }
-#jamila-wallace-portfolio { background-image: url(../images/jamila-wallace-portfolio.jpg) }
-#the-big-brown { background-image: url(../images/the-big-brown.jpg) }
+#portfolio-project {
+	background-image: url(../images/portfolio-project.jpg);
+}
+#memory-game {
+	background-image: url(../images/memory-game.jpg);
+}
+#arcade-classic {
+	background-image: url(../images/arcade-classic.jpg);
+}
+#feedreader-testing {
+	background-image: url(../images/feedreader-testing.jpg);
+}
+#restaurant-review {
+	background-image: url(../images/restaurant-review.jpg);
+}
+#jamila-wallace-portfolio {
+	background-image: url(../images/jamila-wallace-portfolio.jpg);
+}
+#the-big-brown {
+	background-image: url(../images/the-big-brown.jpg);
+}
 
-#task-manager-api { background-image: url(../images/task-manager-api.jpg) }
+#task-manager-api {
+	background-image: url(../images/task-manager-api.jpg);
+}
 
-#chat-app { background-image: url(../images/chat-app.jpg) }
-#weather-app { background-image: url(../images/weather-app.jpg) }
-#fountain-of-dreams { background-image: url(../images/fountain-of-dreams.jpg) }
+#chat-app {
+	background-image: url(../images/chat-app.jpg);
+}
+#weather-app {
+	background-image: url(../images/weather-app.jpg);
+}
+#fountain-of-dreams {
+	background-image: url(../images/fountain-of-dreams.jpg);
+}
+#albion-remastered {
+	background-image: url(../images/albion-remastered.jpg);
+}
