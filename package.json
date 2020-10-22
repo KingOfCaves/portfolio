@@ -1,61 +1,36 @@
 {
-  "name": "kingofcaves-portfolio",
-  "version": "1.0.0",
-  "description": "My portfolio.",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "posthtml": {
-    "plugins": {
-      "posthtml-include": {},
-      "posthtml-beautify": {
-        "rules": {
-          "indent": 4,
-          "blankLines": false
-        }
-      }
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "cssnano": {},
-      "autoprefixer": {}
-    }
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
-  "browserslist": [
-    "defaults"
-  ],
-  "scripts": {
-    "clean": "rimraf ./docs/*",
-    "package": "parcel ./app/index.html --open --no-source-maps --out-dir ./docs --public-url /portfolio/",
-    "post": "npm-run-all clean package"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KingOfCaves/wills-parcel-boilerplate.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KingOfCaves/parcel-boilerplate/issues"
-  },
-  "homepage": "https://github.com/KingOfCaves/parcel-boilerplate#readme",
-  "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
-    "autoprefixer": "^9.7.3",
-    "copyfiles": "^2.1.1",
-    "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.12.4",
-    "posthtml-beautify": "^0.2.6",
-    "posthtml-include": "^1.3.2",
-    "sass": "^1.23.7"
-  }
+	"name": "portfolio",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.5.0",
+		"@testing-library/user-event": "^7.2.1",
+		"date-fns": "^2.16.1",
+		"node-sass": "^4.14.1",
+		"react": "^16.14.0",
+		"react-dom": "^16.14.0",
+		"react-scripts": "3.4.3"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
