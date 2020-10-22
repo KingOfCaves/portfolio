@@ -11,7 +11,20 @@ function App() {
 			return format(this.t, 'pp');
 		},
 	});
+	const [pageIndex, setPageIndex] = useState(0);
 	const updateClock = useRef(null);
+
+	const pages = [
+		{ icon: '003-home3.svg', type: 'home', windows: 3 },
+		{ icon: '386-terminal.svg', type: 'projects', windows: 2 },
+		{ icon: '033-books.svg', type: 'documents', windows: 2 },
+		{ icon: '112-bubbles3.svg', type: 'contact', windows: 2 },
+	];
+
+	const handlePage = (e, pg) => {
+		e.preventDefault();
+		return setPageIndex(pg);
+	};
 
 	useEffect(() => {
 		updateClock.current = setInterval(() => {
@@ -27,26 +40,17 @@ function App() {
 		<>
 			<header className="header">
 				<nav className="navbar">
-					<a className="navbar__link active" href="/">
-						<div className="navbar__link__icon">
-							<img src="/images/icomoon/003-home3.svg" alt="home" />
-						</div>
-					</a>
-					<a className="navbar__link" href="/">
-						<div className="navbar__link__icon">
-							<img src="/images/icomoon/386-terminal.svg" alt="portfolio" />
-						</div>
-					</a>
-					<a className="navbar__link" href="/">
-						<div className="navbar__link__icon">
-							<img src="/images/icomoon/033-books.svg" alt="resume" />
-						</div>
-					</a>
-					<a className="navbar__link" href="/">
-						<div className="navbar__link__icon">
-							<img src="/images/icomoon/112-bubbles3.svg" alt="contact" />
-						</div>
-					</a>
+					{pages.map((page, index) => (
+						<a
+							className={`navbar__link ${index === pageIndex ? 'active' : ''}`}
+							href="/"
+							onClick={(e) => handlePage(e, index)}
+						>
+							<div className="navbar__link__icon">
+								<img src={`/images/icomoon/${page.icon}`} alt="home" />
+							</div>
+						</a>
+					))}
 				</nav>
 				<div className="player">
 					<div className="player__icon">
@@ -71,18 +75,19 @@ function App() {
 					</div>
 				</div>
 			</header>
-			<main className="desktop">
-				{[
-					{ page: 'home', windows: 3 },
-					{ page: 'projects', windows: 2 },
-				].map((workspace, index) => {
+			<main className="desktop" style={{ left: `-${window.innerWidth * pageIndex}px` }}>
+				{pages.map((workspace, index) => {
 					return (
-						<div className={`workspace workspace--${workspace.page}`} key={`workspace--${workspace.page}`}>
+						<div
+							className={`workspace workspace--${workspace.type}`}
+							key={`workspace--${workspace.type}`}
+							style={{ transform: `translate(${window.innerWidth * index}px, 0px)` }}
+						>
 							<div className="windows">
 								{Array(workspace.windows)
 									.fill()
 									.map((window, index) => (
-										<div className="window" key={`workspace--${workspace.page}__window--${index}`}></div>
+										<div className="window" key={`workspace--${workspace.type}__window--${index}`}></div>
 									))}
 							</div>
 						</div>
