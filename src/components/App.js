@@ -47,7 +47,7 @@ function App() {
 							onClick={(e) => handlePage(e, index)}
 						>
 							<div className="navbar__link__icon">
-								<img src={`/images/icomoon/${page.icon}`} alt="home" />
+								<img src={`/images/icomoon/${page.icon}`} alt={page.type} />
 							</div>
 						</a>
 					))}
