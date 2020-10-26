@@ -26,7 +26,6 @@ body {
 	font-family: 'ＭＳ ゴシック', 'MS Gothic', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', '游ゴシック', '游ゴシック体',
 		YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, HiraKakuProN-W3, 'TakaoExゴシック', TakaoExGothic, 'MotoyaLCedar',
 		'Droid Sans Japanese', sans-serif;
-	// font-family: 'Source Sans Pro', sans-serif;
 }
 
 #wrapper {
@@ -180,36 +179,105 @@ body {
 	height: 64rem;
 }
 
-.workspace--home {
-	& .windows {
-		margin: auto;
-		display: grid;
-		gap: 32px;
-		width: 84rem;
-		height: 56rem;
-		grid-template-areas:
-			'a a a b b'
-			'a a a b b'
-			'a a a b b'
-			'a a a b b'
-			'a a a c c'
-			'a a a c c'
-			'a a a c c';
+.workspace--home .windows {
+	margin: auto;
+	display: grid;
+	gap: 32px;
+	width: 108rem;
+	height: 64rem;
+	grid-auto-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-auto-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		'a a a b b'
+		'a a a b b'
+		'a a a b b'
+		'a a a b b'
+		'a a a c c'
+		'a a a c c'
+		'a a a c c';
 
-		& > :nth-child(1) {
-			grid-area: a;
-		}
-		& > :nth-child(2) {
-			grid-area: b;
-		}
-		& > :nth-child(3) {
-			grid-area: c;
-		}
+	& > :nth-child(2) {
+		grid-area: b;
+	}
+	& > :nth-child(3) {
+		grid-area: c;
 	}
 }
 
 .window {
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	overflow-y: auto;
+	overscroll-behavior: contain;
 	background-color: var(--base16-black);
-	border: 4px solid var(--base16-grey);
-	box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.801);
+	box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.801);
+	color: var(--base16-white);
+
+	& > * {
+		filter: drop-shadow(4px 4px 2px #000000) drop-shadow(4px 4px 2px #000000);
+	}
+
+	&--introduction {
+		padding: 4rem 2rem;
+		grid-area: a;
+
+		& > :not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.ascii-art {
+	align-self: center;
+	display: block;
+	white-space: pre;
+	font-family: 'Courier New', Courier, monospace;
+	background-image: repeating-linear-gradient(
+		to right,
+		var(--base16-red),
+		var(--base16-orange),
+		var(--base16-yellow),
+		var(--base16-green),
+		var(--base16-turquoise),
+		var(--base16-blue),
+		var(--base16-purple),
+		var(--base16-red)
+	);
+	background-clip: text;
+	animation: rainbow-scroll 3s reverse linear infinite;
+	font-weight: bolder;
+	color: transparent;
+	background-size: 200% 100%;
+	font-size: 0.66em;
+	filter: drop-shadow(2px 2px 4px #000000) drop-shadow(2px 2px 4px #000000) saturate(3);
+	line-height: 1em;
+	letter-spacing: -1px;
+}
+
+@keyframes rainbow-scroll {
+	from {
+		background-position: 0% 0%;
+	}
+	to {
+		background-position: 200% 200%;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 24px;
+}
+::-webkit-scrollbar-thumb {
+	border: solid rgba(0, 0, 0, 0);
+	border-width: 8px 16px;
+	background-clip: padding-box;
+	background-color: var(--base16-dark-grey);
+}
+::-webkit-scrollbar-button {
+	width: 0;
+	height: 0;
+	display: none;
+}
+::-webkit-scrollbar-corner {
+	background-color: transparent;
 }
