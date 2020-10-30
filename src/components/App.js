@@ -14,125 +14,12 @@ function App() {
 	const [pageIndex, setPageIndex] = useState(0);
 	const updateClock = useRef(null);
 
-	const pages = [
-		{
-			icon: '003-home3.svg',
-			type: 'home',
-			windows: [
-				{
-					flag: 'introduction',
-					content: (
-						<>
-							<span className="ascii-art">
-								{[
-									"`7MMF'     A     `7MF'     `7MM                                            OO ",
-									'  `MA     ,MA     ,V         MM                                            88 ',
-									'   VM:   ,VVM:   ,V .gP"Ya   MM  ,p6"bo   ,pW"Wq.`7MMpMMMb.pMMMb.  .gP"Ya  || ',
-									"    MM.  M' MM.  M',M'   Yb  MM 6M'  OO  6W'   `Wb MM    MM    MM ,M'   Yb || ",
-									'    `MM A\'  `MM A\' 8M""""""  MM 8M       8M     M8 MM    MM    MM 8M"""""" `\' ',
-									'     :MM;    :MM;  YM.    ,  MM YM.    , YA.   ,A9 MM    MM    MM YM.    , ,, ',
-									"      VF      VF    `Mbmmd'.JMML.YMbmd'   `Ybmd9'.JMML  JMML  JMML.`Mbmmd' db ",
-								].join('\n')}
-							</span>
-							<span className="ascii-art">
-								{[
-									"`7MMF'     A     `7MF'     `7MM                                            OO ",
-									'  `MA     ,MA     ,V         MM                                            88 ',
-									'   VM:   ,VVM:   ,V .gP"Ya   MM  ,p6"bo   ,pW"Wq.`7MMpMMMb.pMMMb.  .gP"Ya  || ',
-									"    MM.  M' MM.  M',M'   Yb  MM 6M'  OO  6W'   `Wb MM    MM    MM ,M'   Yb || ",
-									'    `MM A\'  `MM A\' 8M""""""  MM 8M       8M     M8 MM    MM    MM 8M"""""" `\' ',
-									'     :MM;    :MM;  YM.    ,  MM YM.    , YA.   ,A9 MM    MM    MM YM.    , ,, ',
-									"      VF      VF    `Mbmmd'.JMML.YMbmd'   `Ybmd9'.JMML  JMML  JMML.`Mbmmd' db ",
-								].join('\n')}
-							</span>
-							<span className="ascii-art">
-								{[
-									"`7MMF'     A     `7MF'     `7MM                                            OO ",
-									'  `MA     ,MA     ,V         MM                                            88 ',
-									'   VM:   ,VVM:   ,V .gP"Ya   MM  ,p6"bo   ,pW"Wq.`7MMpMMMb.pMMMb.  .gP"Ya  || ',
-									"    MM.  M' MM.  M',M'   Yb  MM 6M'  OO  6W'   `Wb MM    MM    MM ,M'   Yb || ",
-									'    `MM A\'  `MM A\' 8M""""""  MM 8M       8M     M8 MM    MM    MM 8M"""""" `\' ',
-									'     :MM;    :MM;  YM.    ,  MM YM.    , YA.   ,A9 MM    MM    MM YM.    , ,, ',
-									"      VF      VF    `Mbmmd'.JMML.YMbmd'   `Ybmd9'.JMML  JMML  JMML.`Mbmmd' db ",
-								].join('\n')}
-							</span>
-							<span className="ascii-art">
-								{[
-									"`7MMF'     A     `7MF'     `7MM                                            OO ",
-									'  `MA     ,MA     ,V         MM                                            88 ',
-									'   VM:   ,VVM:   ,V .gP"Ya   MM  ,p6"bo   ,pW"Wq.`7MMpMMMb.pMMMb.  .gP"Ya  || ',
-									"    MM.  M' MM.  M',M'   Yb  MM 6M'  OO  6W'   `Wb MM    MM    MM ,M'   Yb || ",
-									'    `MM A\'  `MM A\' 8M""""""  MM 8M       8M     M8 MM    MM    MM 8M"""""" `\' ',
-									'     :MM;    :MM;  YM.    ,  MM YM.    , YA.   ,A9 MM    MM    MM YM.    , ,, ',
-									"      VF      VF    `Mbmmd'.JMML.YMbmd'   `Ybmd9'.JMML  JMML  JMML.`Mbmmd' db ",
-								].join('\n')}
-							</span>
-							<span className="ascii-art">
-								{[
-									"`7MMF'     A     `7MF'     `7MM                                            OO ",
-									'  `MA     ,MA     ,V         MM                                            88 ',
-									'   VM:   ,VVM:   ,V .gP"Ya   MM  ,p6"bo   ,pW"Wq.`7MMpMMMb.pMMMb.  .gP"Ya  || ',
-									"    MM.  M' MM.  M',M'   Yb  MM 6M'  OO  6W'   `Wb MM    MM    MM ,M'   Yb || ",
-									'    `MM A\'  `MM A\' 8M""""""  MM 8M       8M     M8 MM    MM    MM 8M"""""" `\' ',
-									'     :MM;    :MM;  YM.    ,  MM YM.    , YA.   ,A9 MM    MM    MM YM.    , ,, ',
-									"      VF      VF    `Mbmmd'.JMML.YMbmd'   `Ybmd9'.JMML  JMML  JMML.`Mbmmd' db ",
-								].join('\n')}
-							</span>
-							<span className="ascii-art">
-								{[
-									"`7MMF'     A     `7MF'     `7MM                                            OO ",
-									'  `MA     ,MA     ,V         MM                                            88 ',
-									'   VM:   ,VVM:   ,V .gP"Ya   MM  ,p6"bo   ,pW"Wq.`7MMpMMMb.pMMMb.  .gP"Ya  || ',
-									"    MM.  M' MM.  M',M'   Yb  MM 6M'  OO  6W'   `Wb MM    MM    MM ,M'   Yb || ",
-									'    `MM A\'  `MM A\' 8M""""""  MM 8M       8M     M8 MM    MM    MM 8M"""""" `\' ',
-									'     :MM;    :MM;  YM.    ,  MM YM.    , YA.   ,A9 MM    MM    MM YM.    , ,, ',
-									"      VF      VF    `Mbmmd'.JMML.YMbmd'   `Ybmd9'.JMML  JMML  JMML.`Mbmmd' db ",
-								].join('\n')}
-							</span>
-							<span className="ascii-art">
-								{[
-									"`7MMF'     A     `7MF'     `7MM                                            OO ",
-									'  `MA     ,MA     ,V         MM                                            88 ',
-									'   VM:   ,VVM:   ,V .gP"Ya   MM  ,p6"bo   ,pW"Wq.`7MMpMMMb.pMMMb.  .gP"Ya  || ',
-									"    MM.  M' MM.  M',M'   Yb  MM 6M'  OO  6W'   `Wb MM    MM    MM ,M'   Yb || ",
-									'    `MM A\'  `MM A\' 8M""""""  MM 8M       8M     M8 MM    MM    MM 8M"""""" `\' ',
-									'     :MM;    :MM;  YM.    ,  MM YM.    , YA.   ,A9 MM    MM    MM YM.    , ,, ',
-									"      VF      VF    `Mbmmd'.JMML.YMbmd'   `Ybmd9'.JMML  JMML  JMML.`Mbmmd' db ",
-								].join('\n')}
-							</span>
-							<span className="ascii-art">
-								{[
-									"`7MMF'     A     `7MF'     `7MM                                            OO ",
-									'  `MA     ,MA     ,V         MM                                            88 ',
-									'   VM:   ,VVM:   ,V .gP"Ya   MM  ,p6"bo   ,pW"Wq.`7MMpMMMb.pMMMb.  .gP"Ya  || ',
-									"    MM.  M' MM.  M',M'   Yb  MM 6M'  OO  6W'   `Wb MM    MM    MM ,M'   Yb || ",
-									'    `MM A\'  `MM A\' 8M""""""  MM 8M       8M     M8 MM    MM    MM 8M"""""" `\' ',
-									'     :MM;    :MM;  YM.    ,  MM YM.    , YA.   ,A9 MM    MM    MM YM.    , ,, ',
-									"      VF      VF    `Mbmmd'.JMML.YMbmd'   `Ybmd9'.JMML  JMML  JMML.`Mbmmd' db ",
-								].join('\n')}
-							</span>
-							<span className="ascii-art">
-								{[
-									"`7MMF'     A     `7MF'     `7MM                                            OO ",
-									'  `MA     ,MA     ,V         MM                                            88 ',
-									'   VM:   ,VVM:   ,V .gP"Ya   MM  ,p6"bo   ,pW"Wq.`7MMpMMMb.pMMMb.  .gP"Ya  || ',
-									"    MM.  M' MM.  M',M'   Yb  MM 6M'  OO  6W'   `Wb MM    MM    MM ,M'   Yb || ",
-									'    `MM A\'  `MM A\' 8M""""""  MM 8M       8M     M8 MM    MM    MM 8M"""""" `\' ',
-									'     :MM;    :MM;  YM.    ,  MM YM.    , YA.   ,A9 MM    MM    MM YM.    , ,, ',
-									"      VF      VF    `Mbmmd'.JMML.YMbmd'   `Ybmd9'.JMML  JMML  JMML.`Mbmmd' db ",
-								].join('\n')}
-							</span>
-						</>
-					),
-				},
-				{},
-				{},
-			],
-		},
-		{ icon: '386-terminal.svg', type: 'projects', windows: [{}, {}] },
-		{ icon: '033-books.svg', type: 'documents', windows: [{}, {}] },
-		{ icon: '112-bubbles3.svg', type: 'contact', windows: [{}, {}] },
-	];
+	const colorizeSpan = (text = '', color = 'white') => {
+		return <span style={{ color: `var(--base16-${color.toLocaleLowerCase()})` }}>{text}</span>;
+	};
+	const colorizeBlock = (color = 'white', text = '') => {
+		return <div style={{ backgroundColor: `var(--base16-${color.toLocaleLowerCase()})` }}>{text}</div>;
+	};
 
 	const handlePage = (e, pg) => {
 		e.preventDefault();
@@ -149,10 +36,73 @@ function App() {
 		};
 	}, [clock]);
 
-	useEffect(() => {
-		const firstWindow = document.querySelector('.window');
-		firstWindow.classList.add('active');
-	}, []);
+	const pages = [
+		{
+			icon: '003-home3.svg',
+			type: 'home',
+			windows: [
+				{
+					flag: 'introduction',
+					content: (
+						<>
+							<p>Hi, I'm {colorizeSpan('Nick Wills', 'red')}.</p>
+							<p>
+								I am a {colorizeSpan('front-end web developer', 'orange')} that loves working in{' '}
+								{colorizeSpan('React', 'blue')} and {colorizeSpan('Node', 'green')}.
+							</p>
+						</>
+					),
+				},
+				{
+					flag: 'profile',
+					content: (
+						<>
+							<div>
+								<img src="/images/bg.jpg" />
+							</div>
+						</>
+					),
+				},
+				{
+					flag: 'fetch',
+					content: (
+						<>
+							<div>
+								<img src="/images/bg.jpg" />
+							</div>
+							<section>
+								<p>
+									{colorizeSpan('kingofcaves', 'orange')}@{colorizeSpan('pc', 'orange')}
+								</p>
+								<p>{'-'.repeat('kingofcaves@pc'.length)}</p>
+								<p>{colorizeSpan('OS:', 'turquoise')} OpenSUSE</p>
+								<p>{colorizeSpan('Device:', 'turquoise')} ThinkPad W540</p>
+								<p>{colorizeSpan('WM:', 'turquoise')} i3</p>
+								<p>{colorizeSpan('Shell:', 'turquoise')} zsh</p>
+								<p>{colorizeSpan('Editor:', 'turquoise')} vim</p>
+								<p>{colorizeSpan('CPU:', 'turquoise')} Intel i7-4800MQ</p>
+								<p>{colorizeSpan('Memory:', 'turquoise')} 8GB 1600MHz</p>
+								<legend>
+									{colorizeBlock('red')}
+									{colorizeBlock('orange')}
+									{colorizeBlock('yellow')}
+									{colorizeBlock('green')}
+									{colorizeBlock('turquoise')}
+									{colorizeBlock('blue')}
+									{colorizeBlock('purple')}
+									{colorizeBlock('white')}
+									{colorizeBlock('black')}
+								</legend>
+							</section>
+						</>
+					),
+				},
+			],
+		},
+		{ icon: '386-terminal.svg', type: 'projects', windows: [{}, {}] },
+		{ icon: '033-books.svg', type: 'documents', windows: [{}, {}] },
+		{ icon: '112-bubbles3.svg', type: 'contact', windows: [{}, {}] },
+	];
 
 	return (
 		<>
