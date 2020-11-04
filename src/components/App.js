@@ -36,6 +36,8 @@ function App() {
 		};
 	}, [clock]);
 
+	const projects = [{ name: 'Project', summary: 'This is my project', background: '/images/bg.jpg' }];
+
 	const pages = [
 		{
 			icon: '003-home3.svg',
@@ -58,7 +60,7 @@ function App() {
 					content: (
 						<>
 							<div>
-								<img src="/images/bg.jpg" />
+								<img src="/images/bg.jpg" alt="nick wills, me" />
 							</div>
 						</>
 					),
@@ -68,7 +70,7 @@ function App() {
 					content: (
 						<>
 							<div>
-								<img src="/images/bg.jpg" />
+								<img src="/images/bg.jpg" alt="desktop background" />
 							</div>
 							<section>
 								<p>
@@ -99,7 +101,35 @@ function App() {
 				},
 			],
 		},
-		{ icon: '386-terminal.svg', type: 'projects', windows: [{}, {}] },
+		{
+			icon: '386-terminal.svg',
+			type: 'projects',
+			windows: [
+				{
+					flag: 'catalogue',
+					content: (
+						<>
+							{projects.map((project, index) => (
+								<div
+									className="project"
+									key={`project--${index}`}
+									style={{ backgroundImage: `url(${project.background})` }}
+								>
+									<div className="project__container">
+										<span className="project__name">{project.name}</span>
+										<span className="project__summary">{project.summary}</span>
+									</div>
+								</div>
+							))}
+						</>
+					),
+				},
+				{
+					flag: 'details',
+					content: <p>Hello!</p>,
+				},
+			],
+		},
 		{ icon: '033-books.svg', type: 'documents', windows: [{}, {}] },
 		{ icon: '112-bubbles3.svg', type: 'contact', windows: [{}, {}] },
 	];

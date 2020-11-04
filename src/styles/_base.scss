@@ -172,6 +172,7 @@ body {
 }
 
 .windows {
+	flex-shrink: 0;
 	margin: auto;
 	display: grid;
 	gap: 32px;
@@ -195,13 +196,15 @@ body {
 		'a a a c c'
 		'a a a c c'
 		'a a a c c';
+}
 
-	& > :nth-child(2) {
-		grid-area: b;
-	}
-	& > :nth-child(3) {
-		grid-area: c;
-	}
+.workspace--projects .windows {
+	margin: auto;
+	display: grid;
+	gap: 32px;
+	width: 108rem;
+	height: 64rem;
+	grid-auto-columns: 1fr 1fr 1fr;
 }
 
 .window {
@@ -286,6 +289,54 @@ body {
 			max-height: 100%;
 		}
 	}
+
+	&--catalogue {
+		grid-column: span 2;
+		grid-row: 1;
+		padding: 4rem;
+
+		& > :not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+	&--details {
+		grid-column: span 3;
+		grid-row: 1;
+	}
+}
+
+.project {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 16rem;
+	overflow: hidden;
+	border: 6px solid var(--base16-dark-grey);
+	transition: all 0.25s;
+	cursor: pointer;
+	user-select: none;
+
+	&:hover {
+		border-color: var(--base16-light-grey);
+	}
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		backdrop-filter: blur(6px);
+		background-color: #1d1f21c2;
+		padding: 1rem;
+		font-size: 14pt;
+
+		& > :not(:last-child) {
+			margin-bottom: 0.25em;
+		}
+	}
+
+	background-size: cover;
+	background-position: center;
 }
 
 .ascii-art {
