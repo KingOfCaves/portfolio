@@ -12,6 +12,7 @@ function App() {
 		},
 	});
 	const [pageIndex, setPageIndex] = useState(0);
+	const [projectIndex, setProjectIndex] = useState(null);
 	const updateClock = useRef(null);
 
 	const colorizeSpan = (text = '', color = 'white') => {
@@ -111,7 +112,8 @@ function App() {
 						<>
 							{projects.map((project, index) => (
 								<div
-									className="project"
+									onClick={() => setProjectIndex(index)}
+									className={`project ${index === projectIndex ? 'active' : ''}`}
 									key={`project--${index}`}
 									style={{ backgroundImage: `url(${project.background})` }}
 								>
@@ -126,7 +128,33 @@ function App() {
 				},
 				{
 					flag: 'details',
-					content: <p>Hello!</p>,
+					content: (
+						<>
+							{typeof projectIndex === 'number' ? (
+								<div className="selected">
+									<div className="selected__gallery">
+										<div className="selected__gallery__index">
+											<div className="selected__gallery__index__item active"></div>
+											<div className="selected__gallery__index__item"></div>
+										</div>
+										<div className="selected__gallery__prev"></div>
+										<div className="selected__gallery__item">
+											<img src="/images/bg.jpg" alt="test" />
+										</div>
+										<div className="selected__gallery__item">
+											<img src="/images/bg.jpg" alt="test" />
+										</div>
+										<div className="selected__gallery__next"></div>
+									</div>
+								</div>
+							) : (
+								<p style={{ textAlign: 'center' }}>
+									Please select a project <br />
+									to see more details.
+								</p>
+							)}
+						</>
+					),
 				},
 			],
 		},
